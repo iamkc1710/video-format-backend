@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "78567612-c9cb-4d5d-b007-727abbc026e9",
+		"name": "VideoVerse Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37597330"
+	},
+	"item": [
+		{
+			"name": "Merge Video",
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "type",
+						"value": "file",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlhbWtjMTcxMCIsInBhc3N3b3JkIjoiVmlkZW9BcHBAITIzIiwiaWF0IjoxNzIzMjY0ODg2fQ.NxYDao5daLR3YGX1cXFrBYSvGv0bki9VppyxEAKWV_I",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file1",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Projects/node-tutorial/preroll/file1.mp4"
+						},
+						{
+							"key": "file2",
+							"type": "file",
+							"src": "/D:/Projects/node-tutorial/preroll/file1.mp4"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/merge",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Video",
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "type",
+						"value": "file",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlhbWtjMTcxMCIsInBhc3N3b3JkIjoiVmlkZW9BcHBAITIzIiwiaWF0IjoxNzIzMjY0ODg2fQ.NxYDao5daLR3YGX1cXFrBYSvGv0bki9VppyxEAKWV_I",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Projects/node-tutorial/preroll/file1.mp4"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
